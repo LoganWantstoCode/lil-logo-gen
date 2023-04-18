@@ -40,10 +40,10 @@ inquirer.prompt([
         shape = new Square() 
     }
 shape.logoColor(answers.shapeColor) 
-const svg = new SVG()
-svg.logoText(answers.text, answers.color)
+const svg = new SVG();
+svg.setText(answers.text, answers.color)
 svg.logoShape(shape) 
-return fs.writeFileSync ("./Logo.svg", svg.render())
+return fs.writeFileSync ("./examples/Logo.svg", svg.render())
 })
 .catch (err => {
     console.log(err.message)
